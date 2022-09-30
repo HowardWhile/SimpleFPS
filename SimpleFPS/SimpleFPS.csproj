@@ -8,7 +8,7 @@
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Company>aiRobotsLab</Company>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <PackageId>aiRobots.SimpleFPS</PackageId>
     <Product>SimpleFPS</Product>
     <PackageProjectUrl>https://github.com/HowardWhile/SimpleFPS</PackageProjectUrl>
