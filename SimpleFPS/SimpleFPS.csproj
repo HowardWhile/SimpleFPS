@@ -4,6 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Authors>HowardCheng</Authors>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Company>aiRobots-Lab</Company>
   </PropertyGroup>
 
 </Project>
