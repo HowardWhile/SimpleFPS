@@ -1,4 +1,6 @@
-﻿namespace aiRobots
+﻿using System;
+
+namespace aiRobots
 {
     public class SimpleFPS_Args : System.EventArgs
     {

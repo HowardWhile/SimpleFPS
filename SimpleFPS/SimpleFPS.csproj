@@ -1,20 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <Authors>HowardCheng</Authors>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-    <Company>aiRobotsLab</Company>
-    <RepositoryType>git</RepositoryType>
-    <Version>1.1.0</Version>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>aiRobots.SimpleFPS</PackageId>
-    <Product>SimpleFPS</Product>
+    <Version>1.2.0</Version>
+    <Authors>HowardCheng</Authors>
+    <Company>aiRobots</Company>
     <PackageProjectUrl>https://github.com/HowardWhile/SimpleFPS</PackageProjectUrl>
     <PackageIcon>lab_logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/HowardWhile/SimpleFPS</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>

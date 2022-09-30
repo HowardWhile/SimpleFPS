@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFPS-test", "SimpleFPS-test\SimpleFPS-test.csproj", "{C5FAC469-FE8E-4495-A4B4-79BC8A734B6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleFPS-test", "SimpleFPS-test\SimpleFPS-test.csproj", "{C5FAC469-FE8E-4495-A4B4-79BC8A734B6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFPS", "SimpleFPS\SimpleFPS.csproj", "{35E277E1-188F-4DA9-848C-6A2C0691FBB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFPS", "SimpleFPS\SimpleFPS.csproj", "{289E47AD-0C0B-4979-AD26-A58AF758CA44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{C5FAC469-FE8E-4495-A4B4-79BC8A734B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5FAC469-FE8E-4495-A4B4-79BC8A734B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5FAC469-FE8E-4495-A4B4-79BC8A734B6A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35E277E1-188F-4DA9-848C-6A2C0691FBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35E277E1-188F-4DA9-848C-6A2C0691FBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35E277E1-188F-4DA9-848C-6A2C0691FBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35E277E1-188F-4DA9-848C-6A2C0691FBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{289E47AD-0C0B-4979-AD26-A58AF758CA44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{289E47AD-0C0B-4979-AD26-A58AF758CA44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{289E47AD-0C0B-4979-AD26-A58AF758CA44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{289E47AD-0C0B-4979-AD26-A58AF758CA44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
