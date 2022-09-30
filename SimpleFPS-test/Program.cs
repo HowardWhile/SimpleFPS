@@ -1,80 +1,67 @@
-﻿// See https://aka.ms/new-console-template for more information
-using aiRobots;
+﻿using aiRobots;
 
-System.Timers.Timer fps10_timer; // fps = 10
-System.Timers.Timer fps30_timer; // fps = 30
-System.Timers.Timer fps60_timer; // fps = 60
-
+System.Timers.Timer interval_timer;
 SimpleFPS fps_tool_m1;
-SimpleFPS fps_tool_m2;
 SimpleFPS fps_tool_m3;
-
-double sec2ms(double sec)
-{
-    return sec * 1000.0;
-}
+AverageFPS fps_tool_m2;
 
 void initial()
 {
-    Console.WriteLine("initial timer with tick...");
-    fps10_timer = new System.Timers.Timer(sec2ms(1.0 / 10));
-    fps30_timer = new System.Timers.Timer(sec2ms(1.0 / 30));
-    fps60_timer = new System.Timers.Timer(sec2ms(1.0 / 60));
-    fps10_timer.Elapsed += fps10_tick;
-    fps30_timer.Elapsed += fps30_tick;
-    fps60_timer.Elapsed += fps60_tick;
-    fps10_timer.AutoReset = true;
-    fps30_timer.AutoReset = true;
-    fps60_timer.AutoReset = true;
-    fps10_timer.Enabled = true;
-    fps30_timer.Enabled = true;
-    fps60_timer.Enabled = true;
-
     // method 1
     fps_tool_m1 = new SimpleFPS();
 
     // method 2
+    fps_tool_m2 = new AverageFPS();
 
+    // method 3
+    fps_tool_m3 = new SimpleFPS();
+    fps_tool_m3.FPSUpdated += (object sender, SimpleFPS_Args e) =>
+    {
+        msg_out($"method3 fps = {e.FPS}", fore: ConsoleColor.Yellow);
+    };
+
+    // init interval timer
+    Console.WriteLine("initial timer with tick...");
+    interval_timer = new System.Timers.Timer(200); // interval 200 msec => fps 5
+    interval_timer.Elapsed += timer_tick;
+    interval_timer.AutoReset = true;
+    interval_timer.Enabled = true;
 }
-
 void deinitial()
 {
-    fps10_timer.Enabled = false;
-    fps30_timer.Enabled = false;
-    fps60_timer.Enabled = false;
+    interval_timer.Enabled = false;
 }
-
 void press_enter()
 {
     System.Console.WriteLine("press enter to close...");
     System.Console.ReadLine(); //block
-
 }
-
 string now()
 {
     return System.DateTime.Now.ToString("HH:mm:ss.fff");
 }
-
-#region event
-void fps10_tick(Object source, System.Timers.ElapsedEventArgs e)
+void msg_out(string msg, ConsoleColor back = ConsoleColor.Black, ConsoleColor fore = ConsoleColor.White)
 {
-    //System.Console.WriteLine($"{now()}[fps10_tick]");
+    Console.BackgroundColor = back;
+    Console.ForegroundColor = fore;
+    Console.WriteLine($"[{now()}] {msg}");
+    Console.ResetColor();
 }
 
-void fps30_tick(Object source, System.Timers.ElapsedEventArgs e)
+void timer_tick(Object source, System.Timers.ElapsedEventArgs e)
 {
-    //System.Console.WriteLine($"{now()}[fps30_tick]");
+    // FPS method1: basic fixed time frame number method
+    fps_tool_m1.FPSUpdate();
+    msg_out($"method1 fps = {fps_tool_m1.FPS}", fore: ConsoleColor.Blue);
+
+    // FPS method2 by average sampling time method
+    fps_tool_m2.FPSUpdate();
+    msg_out($"method2 fps = {fps_tool_m2.FPS}", fore: ConsoleColor.Cyan);
+
+    // FPS method3: update by event
+    fps_tool_m3.FPSUpdate();
 }
 
-void fps60_tick(Object source, System.Timers.ElapsedEventArgs e)
-{
-    //System.Console.WriteLine($"{now()}[fps60_tick]");
-}
-#endregion
-
-#region flow
 initial();
 press_enter();
 deinitial();
-#endregion
