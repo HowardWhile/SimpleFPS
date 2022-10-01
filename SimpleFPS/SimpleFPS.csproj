@@ -12,6 +12,7 @@
     <RepositoryUrl>https://github.com/HowardWhile/SimpleFPS</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Description>This is a simple FPS calculation tool.</Description>
+    <Copyright>MIT License</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
