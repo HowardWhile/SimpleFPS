@@ -2,7 +2,7 @@
 
 This is a simple FPS calculation tool.
 
-![image-20220930162146935](pic/README/image-20220930162146935.png)
+![image-20220930162146935](https://raw.githubusercontent.com/HowardWhile/SimpleFPS/develop/pic/README/image-20220930162146935.png)
 
 
 
@@ -57,6 +57,8 @@ fps_tool_m3.FPSUpdate();
 
 
 ## Example
+
+### Console mode
 
 **Program.cs**
 
@@ -132,4 +134,24 @@ deinitial();
 ```
 
 
+
+
+
+### Windows Form
+
+![029](https://raw.githubusercontent.com/HowardWhile/SimpleFPS/develop/pic/README/029.gif)
+
+```c#
+private AverageFPS fps_tool = new AverageFPS();
+private void Form1_Load(object sender, EventArgs e)
+{
+    this.timer1.Interval = 15;
+    this.timer1.Start();
+}
+
+private void timer1_Tick(object sender, EventArgs e)
+{
+    this.Text = $"Interval = {this.timer1.Interval}ms, FPS = {fps_tool.FPSUpdate():0.00}";
+}
+```
 
