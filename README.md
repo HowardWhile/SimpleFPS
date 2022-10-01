@@ -139,7 +139,7 @@ deinitial();
 
 ### Windows Form
 
-![029](pic/README/029.gif)
+![029](https://raw.githubusercontent.com/HowardWhile/SimpleFPS/develop/pic/README/029.gif)
 
 ```c#
 private AverageFPS fps_tool = new AverageFPS();
